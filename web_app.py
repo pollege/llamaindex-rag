@@ -1,5 +1,5 @@
 """
-gaddeun
+gaddeun2
 Webapp locale RAG con LlamaIndex + OpenAI.
 
 Questa app aggiunge una interfaccia web al progetto CLI:
