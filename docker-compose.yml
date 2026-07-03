@@ -1,0 +1,12 @@
+services:
+  rag-webapp:
+    build: .
+    container_name: llamaindex-rag-webapp
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./documenti:/app/documenti
+      - ./storage:/app/storage
+    restart: unless-stopped

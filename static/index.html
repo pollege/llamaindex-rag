@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RAG locale</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel documents-panel">
+        <div class="panel-header">
+          <div>
+            <h1>RAG locale</h1>
+            <p>Documenti, indice e chat sul tuo Mac.</p>
+          </div>
+          <button id="rebuildButton" type="button" title="Ricostruisci indice e manifest">
+            Sincronizza tutto
+          </button>
+        </div>
+
+        <form id="uploadForm" class="upload-box">
+          <input id="fileInput" type="file" accept=".txt,.pdf,.docx" />
+          <button type="submit">Carica e indicizza</button>
+        </form>
+
+        <div id="documentList" class="document-list"></div>
+      </section>
+
+      <section class="panel chat-panel">
+        <div id="messages" class="messages"></div>
+
+        <form id="askForm" class="ask-form">
+          <textarea
+            id="questionInput"
+            rows="3"
+            placeholder="Fai una domanda sui documenti..."
+          ></textarea>
+          <button type="submit">Invia</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
